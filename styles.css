@@ -1,0 +1,370 @@
+:root {
+  --ink: #fbf6ef;
+  --muted: #d8cabd;
+  --paper: #fff8f0;
+  --night: #111315;
+  --wine: #7f1d3a;
+  --rose: #ef9aa6;
+  --gold: #f1bf6c;
+  --green: #23483b;
+  --shadow: rgba(0, 0, 0, 0.38);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--night);
+}
+
+button {
+  font: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.gate-screen,
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background-image: url("assets/birthday-backdrop.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.gate-screen {
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.gate-shade,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10, 12, 13, 0.9), rgba(10, 12, 13, 0.52), rgba(10, 12, 13, 0.22)),
+    radial-gradient(circle at 76% 18%, rgba(239, 154, 166, 0.28), transparent 26%);
+}
+
+.gate-content,
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+}
+
+.gate-content {
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 10vw, 7rem);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+h2 {
+  margin: 0;
+  color: #26181b;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lead {
+  width: min(620px, 100%);
+  margin: 24px auto 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  width: min(680px, 100%);
+  margin: 34px auto 0;
+}
+
+.countdown span {
+  display: grid;
+  min-height: 112px;
+  place-items: center;
+  padding: 14px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.countdown strong {
+  display: block;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 500;
+}
+
+.date-line {
+  margin-top: 18px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+}
+
+.birthday-screen {
+  background: var(--paper);
+  color: #26181b;
+}
+
+.hero {
+  display: flex;
+  min-height: 92svh;
+  align-items: center;
+  padding: 28px clamp(24px, 7vw, 96px);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 72px;
+  background: linear-gradient(transparent, var(--paper));
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero .lead {
+  margin-left: 0;
+  color: #eaded3;
+}
+
+.primary-action,
+.surprise-card {
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.primary-action {
+  min-height: 52px;
+  margin-top: 32px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--gold);
+  color: #211611;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+}
+
+.primary-action:hover,
+.surprise-card:hover {
+  transform: translateY(-2px);
+}
+
+.memory-band,
+.letter-band,
+.surprise-band,
+.promise-band {
+  padding: clamp(56px, 8vw, 108px) clamp(18px, 6vw, 84px);
+}
+
+.section-heading {
+  width: min(820px, 100%);
+  margin-bottom: 28px;
+}
+
+.section-heading .eyebrow,
+.letter .eyebrow,
+.promise-copy .eyebrow {
+  color: var(--wine);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.photo-card {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #7f1d3a, #23483b);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-placeholder {
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+  padding: 22px;
+  color: #fff9f2;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.photo-card:nth-child(2) {
+  margin-top: 44px;
+}
+
+.photo-card:nth-child(3) {
+  margin-top: 18px;
+}
+
+.photo-card:nth-child(4) {
+  margin-top: 70px;
+}
+
+.letter-band {
+  background: #f4e4d8;
+}
+
+.letter {
+  width: min(880px, 100%);
+}
+
+.letter p:not(.eyebrow),
+.promise-copy p {
+  color: #4b3631;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.8;
+}
+
+.surprise-band {
+  background: #1a1e1d;
+  color: var(--ink);
+}
+
+.surprise-band h2 {
+  color: var(--ink);
+}
+
+.surprise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.surprise-card {
+  min-height: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  text-align: left;
+  padding: 22px;
+  font-size: 1.25rem;
+}
+
+.surprise-card span {
+  display: block;
+  margin-bottom: 44px;
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.revealed-message {
+  min-height: 78px;
+  margin: 24px 0 0;
+  color: #f6d7df;
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.promise-band {
+  min-height: 68svh;
+  display: grid;
+  align-items: center;
+  background:
+    linear-gradient(rgba(255, 248, 240, 0.88), rgba(255, 248, 240, 0.96)),
+    url("assets/birthday-backdrop.png") center / cover fixed;
+}
+
+.promise-copy {
+  width: min(780px, 100%);
+}
+
+@media (max-width: 860px) {
+  .countdown,
+  .photo-grid,
+  .surprise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-card:nth-child(n) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .gate-screen,
+  .hero {
+    min-height: 100svh;
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 16vw, 4.8rem);
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .countdown span {
+    min-height: 92px;
+  }
+
+  .photo-grid,
+  .surprise-grid {
+    grid-template-columns: 1fr;
+  }
+}

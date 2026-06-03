@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Birthday, My Future Wife</title>
+    <meta name="description" content="A private birthday surprise website with photos, love notes, and countdown magic.">
+    <link rel="preload" href="assets/birthday-backdrop.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section id="locked-view" class="gate-screen" aria-live="polite">
+        <div class="gate-shade"></div>
+        <div class="gate-content">
+          <p class="eyebrow">A surprise is waiting</p>
+          <h1>For my future wife</h1>
+          <p class="lead">This little world opens only on your birthday. Until then, every second is keeping one secret safe.</p>
+          <div class="countdown" aria-label="Birthday countdown">
+            <span><strong id="days">00</strong>Days</span>
+            <span><strong id="hours">00</strong>Hours</span>
+            <span><strong id="minutes">00</strong>Minutes</span>
+            <span><strong id="seconds">00</strong>Seconds</span>
+          </div>
+          <p id="unlock-date" class="date-line"></p>
+        </div>
+      </section>
+
+      <section id="birthday-view" class="birthday-screen hidden">
+        <section class="hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">Happy birthday</p>
+            <h1 id="hero-name">My future wife</h1>
+            <p class="lead">Today is yours, and I wanted the whole page to feel like a hug made from memories, promises, and tiny surprises.</p>
+            <button class="primary-action" type="button" id="start-surprise">Open the first surprise</button>
+          </div>
+        </section>
+
+        <section class="memory-band">
+          <div class="section-heading">
+            <p class="eyebrow">Our little gallery</p>
+            <h2>Photos I never get tired of seeing</h2>
+          </div>
+          <div class="photo-grid" id="photo-grid"></div>
+        </section>
+
+        <section class="letter-band">
+          <div class="letter">
+            <p class="eyebrow">A tiny letter</p>
+            <h2>To the woman I am dreaming beside</h2>
+            <p>
+              You are not just a date on the calendar. You are the kind of person who makes ordinary days feel chosen.
+              I hope this birthday reminds you how deeply you are loved, how beautifully you are seen, and how much magic
+              your smile carries into my life.
+            </p>
+            <p>
+              One day I will call you my wife. Until that day, I will keep choosing you in the quiet ways, the loud ways,
+              and every way in between.
+            </p>
+          </div>
+        </section>
+
+        <section class="surprise-band">
+          <div class="section-heading">
+            <p class="eyebrow">Tap to reveal</p>
+            <h2>Small surprises for her heart</h2>
+          </div>
+          <div class="surprise-grid">
+            <button class="surprise-card" type="button" data-message="You are my favorite notification, my calmest thought, and my loudest prayer.">
+              <span>01</span>
+              A secret line
+            </button>
+            <button class="surprise-card" type="button" data-message="I hope your day is soft, sweet, and full of people who know your worth.">
+              <span>02</span>
+              A wish
+            </button>
+            <button class="surprise-card" type="button" data-message="When I imagine forever, it has your laugh in the background.">
+              <span>03</span>
+              A promise
+            </button>
+          </div>
+          <p id="surprise-message" class="revealed-message">Choose a surprise.</p>
+        </section>
+
+        <section class="promise-band">
+          <div class="promise-copy">
+            <p class="eyebrow">Birthday promise</p>
+            <h2>I will keep making you feel celebrated</h2>
+            <p>Not only today. On busy days, quiet days, difficult days, and every simple morning when love needs to be shown instead of only said.</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
