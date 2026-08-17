@@ -466,7 +466,9 @@ function bindEvents() {
 function boot() {
   configurePage();
   bindEvents();
-  if (shouldShowGate()) {
+  const showGate = shouldShowGate();
+  document.body.classList.toggle("gate-active", showGate);
+  if (showGate) {
     lockedView.classList.remove("is-hidden");
     renderCountdown();
     window.setInterval(renderCountdown, 1000);

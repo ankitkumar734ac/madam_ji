@@ -10,7 +10,7 @@ export const siteConfig = {
 
   birthday: {
     // Turn this on only when you want the pre-birthday countdown.
-    lockUntilBirthday: false,
+    lockUntilBirthday: true,
     month: 8,
     day: 20,
     openEveryYear: true
@@ -155,4 +155,3 @@ export const siteConfig = {
     title: "Our song"
   }
 };
-
