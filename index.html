@@ -2,97 +2,175 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Happy Birthday, My Future Wife</title>
-    <meta name="description" content="A private birthday surprise website with photos, love notes, and countdown magic.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#2a101b">
+    <meta name="description" content="A private birthday love story, made one memory at a time.">
+    <title>A little universe for my favorite person</title>
     <link rel="preload" href="assets/birthday-backdrop.png" as="image">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
-      <section id="locked-view" class="gate-screen" aria-live="polite">
-        <div class="gate-shade"></div>
-        <div class="gate-content">
-          <p class="eyebrow">A surprise is waiting</p>
-          <h1>For my future wife</h1>
-          <p class="lead">This little world opens only on your birthday. Until then, every second is keeping one secret safe.</p>
-          <div class="countdown" aria-label="Birthday countdown">
-            <span><strong id="days">00</strong>Days</span>
-            <span><strong id="hours">00</strong>Hours</span>
-            <span><strong id="minutes">00</strong>Minutes</span>
-            <span><strong id="seconds">00</strong>Seconds</span>
+    <a class="skip-link" href="#experience">Skip to the birthday story</a>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div id="particle-layer" class="particle-layer" aria-hidden="true"></div>
+
+    <noscript><div class="noscript-note">Please turn on JavaScript to open this interactive birthday surprise. ❤️</div></noscript>
+
+    <section id="locked-view" class="gate-screen is-hidden" aria-labelledby="gate-title">
+      <div class="gate-art" aria-hidden="true"></div>
+      <div class="gate-card">
+        <span class="tiny-mark">✦ private & made with love ✦</span>
+        <p class="eyebrow">A surprise is sleeping</p>
+        <h1 id="gate-title">Not yet, beautiful.</h1>
+        <p class="gate-copy">This little universe opens on your birthday. Until then, every second is keeping the secret safe.</p>
+        <div class="countdown" aria-label="Birthday countdown">
+          <span><strong id="days">00</strong><small>days</small></span>
+          <span><strong id="hours">00</strong><small>hours</small></span>
+          <span><strong id="minutes">00</strong><small>minutes</small></span>
+          <span><strong id="seconds">00</strong><small>seconds</small></span>
+        </div>
+        <p id="unlock-date" class="date-line"></p>
+      </div>
+    </section>
+
+    <section id="prologue" class="prologue is-hidden" aria-live="polite">
+      <div class="prologue-noise" aria-hidden="true"></div>
+      <div class="prologue-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="prologue-content">
+        <p id="prologue-kicker" class="eyebrow">A tiny interruption</p>
+        <p id="prologue-line" class="prologue-line">Hey, beautiful.</p>
+        <p id="prologue-note" class="prologue-note">Someone made a little universe just for you.</p>
+        <div class="prologue-actions">
+          <button id="prologue-next" class="button button-light" type="button" data-testid="prologue-next">Are you ready? <span>→</span></button>
+          <button id="prologue-music" class="text-button" type="button">Start with our song <span aria-hidden="true">♫</span></button>
+        </div>
+        <div id="prologue-dots" class="prologue-dots" aria-label="Story progress"></div>
+      </div>
+      <p class="prologue-whisper">Best experienced slowly.</p>
+    </section>
+
+    <main id="experience" class="experience is-hidden" aria-hidden="true">
+      <header class="experience-bar">
+        <a href="#birthday-hero" class="monogram" aria-label="Back to the beginning">M<span>♡</span>Y</a>
+        <div class="experience-actions">
+          <span id="discovery-count" class="discovery-count" aria-live="polite">0 little secrets found</span>
+          <button id="music-toggle" class="icon-button" type="button" aria-label="Play our song" aria-pressed="false">
+            <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+        </div>
+      </header>
+
+      <section id="birthday-hero" class="hero story-section">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-bloom" aria-hidden="true"></div>
+        <button class="secret-heart secret-heart-hero" type="button" data-secret="0" aria-label="A tiny hidden heart">♡</button>
+        <div class="hero-copy reveal">
+          <p id="hero-eyebrow" class="eyebrow"></p>
+          <h1 id="hero-title"></h1>
+          <p id="hero-message" class="hero-message"></p>
+          <a class="button button-rose" href="#memories">Follow the story <span>↓</span></a>
+        </div>
+        <figure id="hero-portrait" class="hero-portrait reveal image-shell">
+          <div class="portrait-orbit" aria-hidden="true"></div>
+          <img id="hero-image" src="" alt="" fetchpriority="high">
+          <figcaption id="hero-photo-note"></figcaption>
+        </figure>
+        <div class="scroll-cue" aria-hidden="true"><span></span>scroll for memories</div>
+      </section>
+
+      <section id="memories" class="memories story-section section-pad">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Chapter one · the way I see you</p>
+          <h2>Some moments deserve to be kept forever.</h2>
+          <p>Swipe through. The photographs with a tiny note are holding more than they show.</p>
+        </div>
+        <div id="memory-reel" class="memory-reel" aria-label="Our photo memories"></div>
+        <div class="swipe-hint" aria-hidden="true"><span>←</span> swipe our little film <span>→</span></div>
+        <button class="secret-heart secret-heart-memory" type="button" data-secret="1" aria-label="A tiny hidden heart">♡</button>
+      </section>
+
+      <section id="reasons" class="reasons story-section section-pad">
+        <div class="reasons-halo" aria-hidden="true"></div>
+        <div class="section-intro section-intro-center reveal">
+          <p class="eyebrow">Chapter two · a constellation of you</p>
+          <h2>A few of the reasons I love you.</h2>
+          <p>I could show them all at once. But where is the magic in that?</p>
+        </div>
+        <div id="reasons-grid" class="reasons-grid"></div>
+        <p class="curiosity-hint reveal">Psst… some hearts on this page are not just decoration. 👀</p>
+      </section>
+
+      <section id="playful" class="playful story-section section-pad">
+        <div class="play-card love-quiz reveal">
+          <span class="card-number">01 / a very serious question</span>
+          <h2>Do you know how much I love you?</h2>
+          <div id="love-options" class="choice-row">
+            <button type="button">Very much</button><button type="button">A lot</button><button type="button">More than anything</button>
           </div>
-          <p id="unlock-date" class="date-line"></p>
+          <p id="love-answer" class="play-answer" aria-live="polite"></p>
+        </div>
+        <div class="play-card gift-tease reveal">
+          <span class="card-number">02 / no peeking</span>
+          <div class="gift-icon" aria-hidden="true"><span></span></div>
+          <h2 id="gift-prompt">Want your birthday gift?</h2>
+          <div class="gift-button-zone"><button id="gift-button" class="button button-dark" type="button">Obviously, yes 😂</button></div>
+          <p id="gift-answer" class="play-answer" aria-live="polite"></p>
         </div>
       </section>
 
-      <section id="birthday-view" class="birthday-screen hidden">
-        <section class="hero">
-          <div class="hero-overlay"></div>
-          <div class="hero-copy">
-            <p class="eyebrow">Happy birthday</p>
-            <h1 id="hero-name">My future wife</h1>
-            <p class="lead">Today is yours, and I wanted the whole page to feel like a hug made from memories, promises, and tiny surprises.</p>
-            <button class="primary-action" type="button" id="start-surprise">Open the first surprise</button>
-          </div>
-        </section>
+      <section id="timeline" class="timeline story-section section-pad">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Chapter three · us, so far</p>
+          <h2>Every version of us led me here.</h2>
+          <p>Not every important moment announces itself. Some simply become part of who we are.</p>
+        </div>
+        <div id="timeline-list" class="timeline-list"></div>
+        <div class="timeline-ending reveal"><p>And my favorite part?</p><h3>Our story is still being written.</h3><span>Always, us. ♡</span></div>
+        <button class="secret-heart secret-heart-timeline" type="button" data-secret="2" aria-label="A tiny hidden heart">♡</button>
+      </section>
 
-        <section class="memory-band">
-          <div class="section-heading">
-            <p class="eyebrow">Our little gallery</p>
-            <h2>Photos I never get tired of seeing</h2>
-          </div>
-          <div class="photo-grid" id="photo-grid"></div>
-        </section>
+      <section id="letter-section" class="letter-section story-section section-pad">
+        <div class="section-intro section-intro-center reveal">
+          <p class="eyebrow">Chapter four · the words I mean</p>
+          <h2>There is something I want you to keep.</h2>
+        </div>
+        <div id="envelope" class="envelope-wrap reveal">
+          <button id="open-letter" class="envelope" type="button" aria-expanded="false" aria-controls="love-letter">
+            <span class="envelope-back"></span><span class="envelope-paper-preview">For my favorite person</span><span class="envelope-front"></span><span class="envelope-flap"></span><span class="wax-seal">♡</span>
+          </button>
+          <p class="envelope-instruction">Tap the seal to open my letter</p>
+        </div>
+        <article id="love-letter" class="love-letter" aria-hidden="true">
+          <p class="letter-date">On your birthday, and on every day after</p>
+          <h3 id="letter-heading"></h3><div id="letter-body"></div><p id="letter-signoff" class="letter-signoff"></p><span id="letter-from" class="letter-from"></span>
+        </article>
+      </section>
 
-        <section class="letter-band">
-          <div class="letter">
-            <p class="eyebrow">A tiny letter</p>
-            <h2>To the woman I am dreaming beside</h2>
-            <p>
-              You are not just a date on the calendar. You are the kind of person who makes ordinary days feel chosen.
-              I hope this birthday reminds you how deeply you are loved, how beautifully you are seen, and how much magic
-              your smile carries into my life.
-            </p>
-            <p>
-              One day I will call you my wife. Until that day, I will keep choosing you in the quiet ways, the loud ways,
-              and every way in between.
-            </p>
-          </div>
-        </section>
+      <section id="birthday-wish" class="birthday-wish story-section">
+        <div class="wish-stars" aria-hidden="true"></div>
+        <div class="wish-card reveal"><p class="eyebrow">My birthday wish for you</p><h2 id="wish-title"></h2><p id="wish-text"></p><div class="wish-signature">with all my love <span>♡</span></div></div>
+      </section>
 
-        <section class="surprise-band">
-          <div class="section-heading">
-            <p class="eyebrow">Tap to reveal</p>
-            <h2>Small surprises for her heart</h2>
-          </div>
-          <div class="surprise-grid">
-            <button class="surprise-card" type="button" data-message="You are my favorite notification, my calmest thought, and my loudest prayer.">
-              <span>01</span>
-              A secret line
-            </button>
-            <button class="surprise-card" type="button" data-message="I hope your day is soft, sweet, and full of people who know your worth.">
-              <span>02</span>
-              A wish
-            </button>
-            <button class="surprise-card" type="button" data-message="When I imagine forever, it has your laugh in the background.">
-              <span>03</span>
-              A promise
-            </button>
-          </div>
-          <p id="surprise-message" class="revealed-message">Choose a surprise.</p>
-        </section>
-
-        <section class="promise-band">
-          <div class="promise-copy">
-            <p class="eyebrow">Birthday promise</p>
-            <h2>I will keep making you feel celebrated</h2>
-            <p>Not only today. On busy days, quiet days, difficult days, and every simple morning when love needs to be shown instead of only said.</p>
-          </div>
-        </section>
+      <section id="ending" class="ending story-section">
+        <div id="ending-first" class="ending-line reveal">That’s all…</div>
+        <div id="ending-second" class="ending-second" aria-hidden="true">…or is it? <span>👀</span></div>
+        <button id="finale-button" class="button button-glow is-hidden" type="button">One last surprise <span>♡</span></button>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <section id="finale" class="finale is-hidden" aria-hidden="true" aria-labelledby="finale-title">
+      <div class="finale-radiance" aria-hidden="true"></div><div id="finale-mosaic" class="finale-mosaic" aria-hidden="true"></div>
+      <div class="finale-copy"><p id="finale-prelude" class="eyebrow"></p><h2 id="finale-title"></h2><p id="finale-line" class="finale-line"></p><p id="finale-closing" class="finale-closing"></p><strong id="finale-words"></strong><button id="finale-close" class="text-button text-button-light" type="button">Stay in our story ↓</button></div>
+    </section>
+
+    <dialog id="memory-dialog" class="memory-dialog">
+      <button id="memory-dialog-close" class="dialog-close" type="button" aria-label="Close memory">×</button>
+      <div class="dialog-photo image-shell"><img id="dialog-image" src="" alt=""></div>
+      <div class="dialog-copy"><p id="dialog-date" class="eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-story"></p></div>
+    </dialog>
+
+    <div id="secret-toast" class="secret-toast" role="status" aria-live="polite" aria-hidden="true"><span class="secret-toast-mark">♡</span><div><small>You found a hidden note</small><p id="secret-toast-text"></p></div></div>
+    <audio id="background-music" loop preload="none"></audio>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
