@@ -6,7 +6,7 @@ export const siteConfig = {
   herName: "My Love",
   herNickname: "beautiful",
   yourName: "Your forever person",
-  pageTitle: "A little universe for my favorite person",
+  pageTitle: "A little universe for my madam ji",
 
   birthday: {
     // Turn this on only when you want the pre-birthday countdown.
