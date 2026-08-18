@@ -56,6 +56,11 @@ function renderCountdown() {
   setText("#minutes", pad(Math.floor((distance % 3600000) / 60000)));
   setText("#seconds", pad(Math.floor((distance % 60000) / 1000)));
   setText("#unlock-date", `Opens ${target.toLocaleDateString(undefined, { month: "long", day: "numeric" })}.`);
+  
+  // Auto-refresh page when birthday arrives
+  if (distance === 0 && isBirthday()) {
+    window.location.reload();
+  }
 }
 
 function shouldShowGate() {
