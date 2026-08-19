@@ -365,7 +365,7 @@ function answerLoveQuestion(event) {
 }
 
 function dodgeGiftButton(event) {
-  if (event.pointerType === "touch" || !window.matchMedia("(pointer: fine)").matches || state.giftDodges >= 2) return;
+  if (state.giftDodges >= 2) return;
   state.giftDodges += 1;
   const x = state.giftDodges % 2 ? 82 : -76;
   const y = state.giftDodges % 2 ? -12 : 13;

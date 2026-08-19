@@ -140,7 +140,7 @@ export const siteConfig = {
     line: "In every lifetime. In every version of us. Every single time.",
     closing: "Happy Birthday to my beautiful wife, my best friend, and my forever.",
     finalWords: "I love you.",
-    photos: ["assets/photos/final-1.jpg", "assets/photos/final-2.jpg", "assets/photos/final-3.jpg"]
+    photos: ["assets/photos/final-1.png", "assets/photos/final-2.png", "assets/photos/final-3.png"]
   },
 
   music: {
