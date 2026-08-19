@@ -10,14 +10,14 @@ export const siteConfig = {
 
   birthday: {
     // Turn this on only when you want the pre-birthday countdown.
-    lockUntilBirthday: true,
+    lockUntilBirthday: false,
     month: 8,
     day: 20,
     openEveryYear: true
   },
 
   prologue: [
-    { kicker: "A tiny interruption", line: "Hey, beautiful.", note: "Someone made a little universe just for you." },
+    { kicker: "A tiny interruption", line: "Hey, beautiful.", note: "Your Shreeman made a little universe just for you." },
     { kicker: "Before you continue", line: "I need you to know something.", note: "This is not just another page on the internet." },
     { kicker: "Take a breath", line: "Today isn't just another day.", note: "It is the day the world quietly became better." },
     { kicker: "And the reason is you", line: "My favorite person came into this world.", note: "So, of course, that deserves a little magic." }
@@ -116,7 +116,7 @@ export const siteConfig = {
   letter: {
     heading: "To my wife, my calm, and my favorite person",
     paragraphs: [
-      "Happy birthday, my love. I hope you know that my life is better not only because of the big memories we have made, but because of the smallest things you do without even noticing—the way you care, the way you listen, and the way your presence makes an ordinary room feel like home.",
+      "Happy Birthday, My Dear Madam Ji. I hope you know that my life is better not only because of the big memories we have made, but because of the smallest things you do without even noticing—the way you care, the way you listen, and the way your presence makes an ordinary room feel like home.",
       "You have changed the rhythm of my life. You have given me someone to laugh with, dream with, be completely honest with, and come back to at the end of every kind of day. I never want to take the privilege of calling you my wife for granted.",
       "I love the story behind us, but I am even more excited about the story ahead: new places, quiet mornings, ridiculous jokes, brave decisions, and the two of us growing older while still finding new reasons to choose each other.",
       "Today I wish you the kind of happiness that feels peaceful, success that feels meaningful, and love that never leaves you wondering whether you are seen. You are. Completely."
