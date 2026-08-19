@@ -10,7 +10,7 @@ export const siteConfig = {
 
   birthday: {
     // Turn this on only when you want the pre-birthday countdown.
-    lockUntilBirthday: true,
+    lockUntilBirthday: false,
     month: 8,
     day: 20,
     openEveryYear: true
@@ -27,49 +27,49 @@ export const siteConfig = {
     eyebrow: "A celebration of you",
     title: "Happy Birthday, My Love",
     message: "For every smile you have given me, every ordinary day you have made beautiful, and every version of us still waiting ahead.",
-    photo: "assets/photos/hero.jpg",
+    photo: "assets/photos/hero.png",
     photoAlt: "My favorite portrait of you",
     photoNote: "The face that still makes everything else go quiet."
   },
 
   memories: [
     {
-      src: "assets/photos/memory-1.jpg",
+      src: "assets/photos/memory-1.png",
       alt: "A favorite smiling memory",
       caption: "One of my favorite smiles",
       date: "That beautiful day",
       story: "I remember looking at you and thinking how unfair it was that one person could make a whole place feel warmer just by smiling."
     },
     {
-      src: "assets/photos/memory-2.jpg",
+      src: "assets/photos/memory-2.png",
       alt: "A quiet moment together",
       caption: "The ordinary days I treasure",
       date: "A little moment, forever kept",
       story: "Nothing spectacular was happening—and that is exactly why I love this memory. With you, ordinary never feels ordinary."
     },
     {
-      src: "assets/photos/memory-3.jpg",
+      src: "assets/photos/memory-3.png",
       alt: "A happy photograph together",
       caption: "Still wondering how I got this lucky",
       date: "Us, being us",
       story: "This photo holds one of my favorite versions of us: happy, unguarded, and completely at home beside each other."
     },
     {
-      src: "assets/photos/memory-4.jpg",
+      src: "assets/photos/memory-4.png",
       alt: "A candid portrait",
       caption: "The look I could recognize anywhere",
       date: "A candid I adore",
       story: "It is the little expressions you do without noticing that live in my mind the longest. This is one of them."
     },
     {
-      src: "assets/photos/memory-5.jpg",
+      src: "assets/photos/memory-5.png",
       alt: "A joyful shared memory",
-      caption: "Proof that joy looks good on us",
+      caption: "Proof that joy looks good on you",
       date: "One for the forever album",
       story: "If I could bottle a feeling, it would be the happiness in this exact moment—and I would save it for every difficult day."
     },
     {
-      src: "assets/photos/memory-6.jpg",
+      src: "assets/photos/memory-6.png",
       alt: "A romantic photograph together",
       caption: "My favorite place is next to you",
       date: "Right where I belong",
@@ -90,26 +90,20 @@ export const siteConfig = {
     {
       date: "The beginning",
       title: "When you became my favorite hello",
-      text: "Replace this with how you met, or the first moment you knew she was going to matter.",
-      photo: "assets/photos/timeline-1.jpg"
+      text: "We met for the first time in the peaceful temple, surrounded by prayers. It was just a simple conversation between two strangers, but somehow, it didn’t feel ordinary..",
+      photo: "assets/photos/timeline-1.png"
     },
     {
       date: "A day we still talk about",
-      title: "Our first unforgettable adventure",
-      text: "Add one vivid detail here—the weather, a joke, a wrong turn, or the way she looked.",
-      photo: "assets/photos/timeline-2.jpg"
-    },
-    {
-      date: "The day we chose forever",
-      title: "My easiest yes",
-      text: "Write what marrying her meant to you and the tiny moment from that day you remember most.",
-      photo: "assets/photos/timeline-3.jpg"
+      title: "My first unforgettable moment with you.",
+      text: "Just the two of us, surrounded by soft golden lights in the quiet car. When I took your hand and slid the ring onto your finger, the whole world faded away. It wasn’t a proposal, but a quiet promise from the depths of my heart. Watching your smile in that gentle sparkle, my chest swelled with more love than words could ever hold. In that still, perfect breath of time, it was only you and me—a moment etched into my soul forever.",
+      photo: "assets/photos/timeline-2.png"
     },
     {
       date: "Right now",
       title: "Still my favorite chapter",
       text: "We have changed, learned, laughed, and grown—and I would still choose this life with you every time.",
-      photo: "assets/photos/timeline-4.jpg"
+      photo: "assets/photos/timeline-4.png"
     }
   ],
 
